@@ -1,0 +1,16 @@
+<div ng-controller="postController">
+    <a href="post/add">Add</a>
+<table>
+    <tr>
+        <th ng-click="sortData('title')">Title <div ng-class="getClass('title')"></div> </th>
+        <th ng-click="sortData('comment')">Comments <div ng-class="getClass('comment')"></div> </th>
+        <th>Action</th>
+    </tr>
+    <tr ng-repeat="post in posts">
+
+        <td>{{post.title}}</td>
+        <td>{{post.comment}}</td>
+        <td><a href="#" ng-click="remove($index)">Remove</a> | <a href="">Edit</a> </td>
+    </tr>
+</table>
+</div>
